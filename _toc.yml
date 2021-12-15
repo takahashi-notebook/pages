@@ -3,8 +3,9 @@
 
 format: jb-book
 root: intro
+
 chapters:
 - file: env
   sections:
   - file: envmac
-
+- file: reference
