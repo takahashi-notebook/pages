@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>macでのpython開発環境構築例 &#8212; takahashi-notebook</title>
+    <title>参考文献 &#8212; takahashi-notebook</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,7 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="参考文献" href="reference.html" />
-    <link rel="prev" title="環境構築" href="env.html" />
+    <link rel="prev" title="macでのpython開発環境構築例" href="envmac.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -92,25 +91,25 @@
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="env.html">
    環境構築
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="envmac.html">
      macでのpython開発環境構築例
     </a>
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="reference.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    参考文献
   </a>
  </li>
@@ -155,7 +154,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/envmac.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="_sources/reference.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -175,7 +174,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/takahashi-notebook/pages/issues/new?title=Issue%20on%20page%20%2Fenvmac.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/takahashi-notebook/pages/issues/new?title=Issue%20on%20page%20%2Freference.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -196,7 +195,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/takahashi-notebook/pages/master?urlpath=tree/docs/envmac.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/takahashi-notebook/pages/master?urlpath=tree/docs/reference.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -213,49 +212,6 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#homebrew">
-   インストール用のソフトウェアHOMEBREW
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#python3">
-   python3
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#git">
-   Git
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#id1">
-   仮想環境
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#notebook">
-   notebook
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#vs-codepython">
-   VS codeのpython設定
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#jupyter-book">
-   Jupyter Book
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -264,101 +220,40 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="macpython">
-<h1>macでのpython開発環境構築例<a class="headerlink" href="#macpython" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="homebrew">
-<h2>インストール用のソフトウェアHOMEBREW<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
-<p>HOME BREWのインストール
-/bin/bash -c “$(curl -fsSL <a class="reference external" href="https://raw.githubusercontent.com/Homebrew/install/master/install.sh">https://raw.githubusercontent.com/Homebrew/install/master/install.sh</a>)”</p>
-</div>
-<div class="section" id="python3">
-<h2>python3<a class="headerlink" href="#python3" title="Permalink to this headline">¶</a></h2>
-<p>python3のインストール<br />
-brew install python</p>
-<p>python3インストール場所確認<br />
-which python3</p>
-<p>python3バージョンの確認<br />
-python3 –version</p>
-<p>pip（pythonライブラリインストール用のライブラリ）のアップグレード<br />
-python3 -m pip install –upgrade pip</p>
-</div>
-<div class="section" id="git">
-<h2>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
-<p>Gitのインストール<br />
-brew install git</p>
-<p>Gitのインストール場所確認<br />
-which git</p>
-<p>Gitのバージョン確認<br />
-git –version</p>
-<p>Gitの設定<br />
-git config –global <a class="reference external" href="http://user.name">user.name</a> value<br />
-git config –global user.email value</p>
-<p>Gitの設定確認<br />
-git config –global <a class="reference external" href="http://user.name">user.name</a> xxx<br />
-git config –global user.email <a class="reference external" href="mailto:xxx&#37;&#52;&#48;xxx&#46;xxx">xxx<span>&#64;</span>xxx<span>&#46;</span>xxx</a></p>
-</div>
-<div class="section" id="id1">
-<h2>仮想環境<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>venvで仮想環境を作成する<br />
-python3.10 -m venv .**** (例：.venv)</p>
-<p>仮想環境を確認する<br />
-ls -a</p>
-<p>仮想環境の中を確認する<br />
-ls .venv<br />
-ls .venv/bin</p>
-<p>仮想環境を反映する<br />
-source .venv/bin/activate</p>
-<p>仮想環境から出る<br />
-deactivate</p>
-<p>仮想環境を消す<br />
-rm -rf .venv</p>
-<p>ライブラリの出力<br />
-pip3 freeze &gt; requirements.txt</p>
-<p>ライブラリ出力リストをインストール<br />
-pip3 install -r requirements.txt</p>
-</div>
-<div class="section" id="notebook">
-<h2>notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h2>
-<p>notebookのインストール<br />
-python3 -m pip install jupyter</p>
-<p>notebookの実行<br />
-python3 -m notebook</p>
-</div>
-<div class="section" id="vs-codepython">
-<h2>VS codeのpython設定<a class="headerlink" href="#vs-codepython" title="Permalink to this headline">¶</a></h2>
-<p>python3の場所を設定する
-setting &gt; command palette &gt; python select interpreter &gt;</p>
-<p>VS codeの設定確認<br />
-VS code &gt; terminal &gt; which python<br />
-VS code &gt; terminal &gt; python –version<br />
-VS code &gt; terminal &gt; pip –version</p>
-<p>VS codeのエディタ設定<br />
-setting &gt; command palette &gt; python linting enabled<br />
-setting &gt; command palette &gt; python linting flake8</p>
-<p>VS code で git clone<br />
-setting &gt; command palette &gt; git clone</p>
-</div>
-<div class="section" id="jupyter-book">
-<h2>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this headline">¶</a></h2>
-<p>Jupyter Bookのインストール<br />
-pip3 install -U jupyter-book</p>
-<p>Jupyter Book インストールの作成<br />
-jb create test_book</p>
-<p>Jupyter Book のビルド<br />
-cd test_book<br />
-jb build .</p>
-<p>Jupyter Bookのソースコードを更新する
-jb build –all .
-git checkout master
-git add .
-git commit -m “comment”
-git push origin master</p>
-<p>GitHub Pagesを更新する
-cd test_book
-jb build –all .
-git checkout master
-ghp-import -n -p -f _build/html</p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
+<h1>参考文献<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>machine learning<br />
+Aurélien Géron, 下田 倫大(監訳), 長尾 高弘(翻訳)<br />
+scikit-learn、Keras、TensorFlowによる実践機械学習<br />
+O’Reilly Japan<br />
+<a class="reference external" href="https://github.com/ageron/handson-ml2">https://github.com/ageron/handson-ml2</a></p></li>
+<li><p>Deep Learning<br />
+ゼロから作る Deep Learning<br />
+O’Reilly Japan<br />
+<a class="reference external" href="https://github.com/oreilly-japan/deep-learning-from-scratch">https://github.com/oreilly-japan/deep-learning-from-scratch</a></p></li>
+<li><p>Deep Learning<br />
+ゼロから作る Deep Learning 2<br />
+O’Reilly Japan<br />
+<a class="reference external" href="https://github.com/oreilly-japan/deep-learning-from-scratch-2">https://github.com/oreilly-japan/deep-learning-from-scratch-2</a></p></li>
+<li><p>Block Chain 1.0<br />
+Jimmy Song, 中川 卓俊(監訳), 住田 和則(監訳), 中村 昭雄(監訳), 星野 靖子(翻訳)<br />
+プログラミング・ビットコイン<br />
+O’Reilly Japan<br />
+<a class="reference external" href="https://github.com/jimmysong/programmingbitcoin">https://github.com/jimmysong/programmingbitcoin</a></p></li>
+<li><p>Block Chain 2.0<br />
+Kevin Solorio, Randall Kanna, David H. Hoover, 中城 元臣(監訳), 株式会社クイープ(翻訳)<br />
+SolidityとEthereumによる実践スマートコントラクト開発<br />
+O’Reilly Japan<br />
+<a class="reference external" href="https://github.com/RedSquirrelTech/hoscdev">https://github.com/RedSquirrelTech/hoscdev</a></p></li>
+<li><p>Block Chain 3.0</p></li>
+<li><p>Quantum Computing<br />
+Qiskitを使った量子計算の学習<br />
+<a class="reference external" href="https://qiskit.org/textbook/ja/ch-machine-learning/machine-learning-qiskit-pytorch.html">https://qiskit.org/textbook/ja/ch-machine-learning/machine-learning-qiskit-pytorch.html</a></p></li>
+<li><p>Quantum Computing<br />
+量子コンピューティング・ワークブック<br />
+<a class="reference external" href="https://utokyo-icepp.github.io/qc-workbook/welcome.html">https://utokyo-icepp.github.io/qc-workbook/welcome.html</a></p></li>
+</ul>
 </div>
 
     <script type="text/x-thebe-config">
@@ -386,19 +281,12 @@ ghp-import -n -p -f _build/html</p>
         
             <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="env.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="envmac.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">環境構築</p>
+            <p class="prev-next-title">macでのpython開発環境構築例</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="reference.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">参考文献</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
         
