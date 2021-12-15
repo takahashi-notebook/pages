@@ -8,7 +8,7 @@
 # scikit-learn、Keras、TensorFlowによる実践機械学習  
 # O'Reilly Japan  
 # https://github.com/ageron/handson-ml2
-#   
+#     
 # ・Deep Learning  
 # ゼロから作る Deep Learning  
 # O'Reilly Japan  
