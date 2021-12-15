@@ -99,16 +99,16 @@
 # jb build .  
 # 
 # Jupyter Bookのソースコードを更新する
-# jb build --all .
-# git checkout master
-# git add .
-# git commit -m "comment"
-# git push origin master
+# jb build --all .  
+# git checkout master  
+# git add .  
+# git commit -m "comment"  
+# git push origin master  
 # 
 # GitHub Pagesを更新する
-# cd test_book
-# jb build --all .
-# git checkout master
+# cd test_book  
+# jb build --all .  
+# git checkout master  
 # ghp-import -n -p -f _build/html
 
 # 

@@ -348,15 +348,15 @@ jb create test_book</p>
 cd test_book<br />
 jb build .</p>
 <p>Jupyter Bookのソースコードを更新する
-jb build –all .
-git checkout master
-git add .
-git commit -m “comment”
+jb build –all .<br />
+git checkout master<br />
+git add .<br />
+git commit -m “comment”<br />
 git push origin master</p>
 <p>GitHub Pagesを更新する
-cd test_book
-jb build –all .
-git checkout master
+cd test_book<br />
+jb build –all .<br />
+git checkout master<br />
 ghp-import -n -p -f _build/html</p>
 </div>
 </div>
