@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neural Network &#8212; takahashi-notebook</title>
+    <title>Natural Language Processing &#8212; takahashi-notebook</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="参考文献" href="ml-ref.html" />
-    <link rel="prev" title="Liner Regression" href="lr.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -91,7 +89,7 @@
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../env/env.html">
    環境構築
@@ -119,23 +117,23 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ml.html">
    機械学習
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="lr.html">
      Liner Regression
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="nn.html">
      Neural Network
     </a>
    </li>
@@ -236,7 +234,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/ml/nn.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/ml/nlp.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -256,7 +254,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/takahashi-notebook/pages/issues/new?title=Issue%20on%20page%20%2Fml/nn.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/takahashi-notebook/pages/issues/new?title=Issue%20on%20page%20%2Fml/nlp.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -277,7 +275,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/takahashi-notebook/pages/main?urlpath=tree/doc/ml/nn.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/takahashi-notebook/pages/main?urlpath=tree/doc/ml/nlp.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -302,14 +300,48 @@
         
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="neural-network">
-<h1>Neural Network<a class="headerlink" href="#neural-network" title="Permalink to this headline">¶</a></h1>
-<p>Neural Networkの種類<br />
-・Neural Network<br />
-・Convolutional Neural Network<br />
-・Recurrent Neural Network<br />
-・Recurrent convolutional neural network<br />
-・Deep Q-Network</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="natural-language-processing">
+<h1>Natural Language Processing<a class="headerlink" href="#natural-language-processing" title="Permalink to this headline">¶</a></h1>
+<p>Natural Language Processingの種類<br />
+・シソーラス（上位・下位概念の辞書）<br />
+・カウントベース  単語の類似性性をベクトルで表現する。単語数が多いと計算時間がかかる。オンライン学習できない。
+・推論ベース  ミニバッチで計算できるため、オンライン学習できる。</p>
+<p>・カウントベース
+ある単語の付近で使用される単語をカウントしてベクトル表示する<br />
+co-occurance matrix:<br />
+ある単語の付近で使用された単語の回数を表すの2次元行列（ベクトル表示を並べて行列表示したもの）<br />
+Pointwise Mutual Information：<br />
+co-occurance matrixを同時に使用される確率に変更したもの<br />
+Positive PMI :<br />
+対数の発散対策のため、PMIで0以下を0としたもの
+ppmi = max(0, PMI(x,y))<br />
+Singurar Value Decomposition<br />
+U, S, V = np.linalg.svd(W)<br />
+で変換したうちの最初の方を使用することで圧縮できる。<br />
+SVDの計算はO(N^3)<br />
+高速化したtruncated SVD</p>
+<p>手順
+文章から単語idとword変換辞書を作成する。<br />
+文章を単語idの順に変換する。<br />
+co-occurence-matrixを作成する  。
+ppmiに変換する。<br />
+SVD変換する。</p>
+<p>・推論ベース  word2vec<br />
+continuous bag-of-words<br />
+2つの単語から挟まれる単語を推論する。入力層が2つ、出力層が１つ。<br />
+P(w_t|w_t-1,w_t+1)<br />
+L = -logP(w_t|w_t-1,w_t+1)<br />
+skip-gram<br />
+１つの単語から前後の単語を推測する。入力層が１つ、出力層が２つ<br />
+P(w_t-1,w_t+1|w_t)<br />
+L = -logP(w_t-1,w_t+1|w_t)<br />
+= -logP(w_t-1|w_t)P(w_t+1|w_t)<br />
+= -logP(w_t-1|w_t)-logP(w_t+1|w_t)</p>
+<p>計算の簡略化<br />
+・Embedding<br />
+入力が単語idを表すone-hotの場合、ある列を指定して抜き取れば、最初の層は行列計算する必要がない。<br />
+・negative sampling<br />
+単語idの数に伴い行列の大きさ増えないように、正解とコーパスの頻度に応じたサンプルされた複数の不正解で計算する。</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -336,21 +368,7 @@
               
         
             <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="lr.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Liner Regression</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="ml-ref.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">参考文献</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
         
         </div>
