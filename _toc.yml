@@ -2,10 +2,25 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
-
+root: note/intro
 chapters:
-- file: env
+- file: note/env0
   sections:
-  - file: envmac
-- file: reference
+  - file: note/env1
+  - file: note/env2
+  - file: note/env3
+  - file: note/env4
+- file: note/ml0
+  sections:
+  - file: note/ml1
+  - file: note/ml2
+  - file: note/ml3
+  - file: note/mlr
+- file: note/bc0
+  sections:
+  - file: note/bcr
+- file: note/qc0
+  sections:
+  - file: note/qc1
+  - file: note/qc2
+  - file: note/qcr
