@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>mac用コマンド &#8212; takahashi-note</title>
+    <title>hands on &#8212; takahashi-note</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="機械学習" href="ml0.html" />
-    <link rel="prev" title="hands on" href="env3.html" />
+    <link rel="next" title="mac用コマンド" href="env5.html" />
+    <link rel="prev" title="python計算用ライブラリ" href="env3.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,21 +109,26 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="env1.html">
-     python開発環境
+     環境設定
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="env2.html">
-     python計算用ライブラリ
+     python開発環境
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="env3.html">
-     hands on
+     python計算用ライブラリ
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
+     hands on
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="env5.html">
      mac用コマンド
     </a>
    </li>
@@ -310,18 +315,18 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sleep">
-   sleep
+  <a class="reference internal nav-link" href="#id1">
+   仮想環境
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#battery">
-   battery
+  <a class="reference internal nav-link" href="#notebook">
+   notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-show-hidden-file-on-mac">
-   How to show hidden file on mac
+  <a class="reference internal nav-link" href="#jupyter-book">
+   Jupyter Book
   </a>
  </li>
 </ul>
@@ -334,7 +339,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>mac用コマンド</h1>
+                <h1>hands on</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -345,18 +350,18 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sleep">
-   sleep
+  <a class="reference internal nav-link" href="#id1">
+   仮想環境
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#battery">
-   battery
+  <a class="reference internal nav-link" href="#notebook">
+   notebook
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#how-to-show-hidden-file-on-mac">
-   How to show hidden file on mac
+  <a class="reference internal nav-link" href="#jupyter-book">
+   Jupyter Book
   </a>
  </li>
 </ul>
@@ -368,20 +373,35 @@
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="mac">
-<h1>mac用コマンド<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="sleep">
-<h2>sleep<a class="headerlink" href="#sleep" title="Permalink to this headline">¶</a></h2>
-<p>sudo pmset -a disablesleep 1<br />
-sudo pmset -a disablesleep 0</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="hands-on">
+<h1>hands on<a class="headerlink" href="#hands-on" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>仮想環境<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>venvで仮想環境を作成する<br />
+python3.10 -m venv .**** (例：.venv)</p>
+<p>仮想環境を反映する<br />
+source .venv/bin/activate</p>
+<p>仮想環境から出る<br />
+deactivate</p>
+<p>ライブラリの出力<br />
+pip3 freeze &gt; requirements.txt</p>
+<p>ライブラリ出力リストをインストール<br />
+pip3 install -r requirements.txt</p>
 </div>
-<div class="section" id="battery">
-<h2>battery<a class="headerlink" href="#battery" title="Permalink to this headline">¶</a></h2>
-<p>ioreg -c AppleSmartBattery | grep -i Capacity</p>
+<div class="section" id="notebook">
+<h2>notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h2>
+<p>notebookの実行<br />
+python3 -m notebook</p>
 </div>
-<div class="section" id="how-to-show-hidden-file-on-mac">
-<h2>How to show hidden file on mac<a class="headerlink" href="#how-to-show-hidden-file-on-mac" title="Permalink to this headline">¶</a></h2>
-<p>Press Command + Shift + .</p>
+<div class="section" id="jupyter-book">
+<h2>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter Bookの作成<br />
+jb create xxx</p>
+<p>Jupyter Bookの更新<br />
+jb build –all .<br />
+jb build .</p>
+<p>GitHub Pagesを更新する<br />
+ghp-import -n -p -f _build/html</p>
 </div>
 </div>
 
@@ -414,13 +434,13 @@ sudo pmset -a disablesleep 0</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">hands on</p>
+            <p class="prev-next-title">python計算用ライブラリ</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="ml0.html" title="next page">
+    <a class='right-next' id="next-link" href="env5.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">機械学習</p>
+        <p class="prev-next-title">mac用コマンド</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

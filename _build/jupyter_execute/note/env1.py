@@ -1,70 +1,43 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # python開発環境
+# # 環境設定
 # 
-# ## インストール用のソフトウェアHOMEBREW
-# HOME BREWのインストール
-# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"  
+# 環境変数の確認  
+# env
 #   
-# ## python3
-# python3のインストール  
-# brew install python  
+# shellのバージョン  
+# echo $SHELL  
 #   
-# python3インストール場所確認  
-# which python3  
+# シェルのリスト  
+# $ cat /etc/shells  
 #   
-# python3バージョンの確認  
-# python3 --version  
+# zshへの切り替え  
+# chsh -s /bin/zsh  
 #   
-# pip（pythonライブラリインストール用のライブラリ）のアップグレード  
-# python3 -m pip install --upgrade pip  
+# ホームディレクトリに移動し設定ファイルを作る  
+# cd  
+# touch .zshrc（zshの場合）  
 #   
-# ## Git
-# Gitのインストール    
-# brew install git  
-#   
-# Gitのインストール場所確認  
-# which git  
-#   
-# Gitのバージョン確認  
-# git --version  
-#   
-# Gitの設定  
-# git config --global user.name "xxx"  
-# git config --global user.email xxx@xxx.xxx  
-#   
-# Gitの設定確認  
-# git config --list 
-#   
-# ## 仮想環境
-# venvで仮想環境を作成する  
-# python3.10 -m venv .**** (例：.venv)  
-#   
-# ## notebook
-# notebookのインストール  
-# python3 -m pip install jupyter  
-#   
-# ## VS codeのpython設定  
-# pythonのextensionをインストール
-# Extensions >  Python
-#   
-# python3の場所を設定する  
-# setting > command palette > python select interpreter >  
-#   
-# VS codeの設定確認  
-# VS code > terminal > which python  
-# VS code > terminal > python --version  
-#   
-# VS codeのエディタ設定  
-# setting > command palette > python linting enabled  
-# setting > command palette > python linting flake8  
-#   
-# VS code で git clone  
-# setting > command palette > git clone  
+# pathの確認  
+# echo $PATH  
 # 
-# ## Jupyter Book  
-# Jupyter Bookのインストール   
-# pip3 install -U jupyter-book  
+# パスの設定
+# export PATH=$PATH：<追加したいPATH>
+# 
+# パスの更新
+# source ~/.zhsrc
+# 
+# vi で編集する場合  
+# vi directory/folder  
+# 
+# viのコマンド
+# i , insert  
+# x , delete  
+# :q , quit  
+# :q! , force-quit  
+# :w , write  
+# :wq , write and quit  
+# 
 
 # 

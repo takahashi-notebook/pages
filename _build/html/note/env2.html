@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>python計算用ライブラリ &#8212; takahashi-note</title>
+    <title>python開発環境 &#8212; takahashi-note</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="hands on" href="env3.html" />
-    <link rel="prev" title="python開発環境" href="env1.html" />
+    <link rel="next" title="python計算用ライブラリ" href="env3.html" />
+    <link rel="prev" title="環境設定" href="env1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -109,21 +109,26 @@
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="env1.html">
-     python開発環境
+     環境設定
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     python計算用ライブラリ
+     python開発環境
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="env3.html">
-     hands on
+     python計算用ライブラリ
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="env4.html">
+     hands on
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="env5.html">
      mac用コマンド
     </a>
    </li>
@@ -310,18 +315,38 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tensor-flow">
-   tensor flow
+  <a class="reference internal nav-link" href="#homebrew">
+   インストール用のソフトウェアHOMEBREW
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#qiskit">
-   qiskit
+  <a class="reference internal nav-link" href="#python3">
+   python3
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#d-wave">
-   D-Wave
+  <a class="reference internal nav-link" href="#git">
+   Git
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   仮想環境
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notebook">
+   notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vs-codepython">
+   VS codeのpython設定
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-book">
+   Jupyter Book
   </a>
  </li>
 </ul>
@@ -334,7 +359,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>python計算用ライブラリ</h1>
+                <h1>python開発環境</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -345,18 +370,38 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tensor-flow">
-   tensor flow
+  <a class="reference internal nav-link" href="#homebrew">
+   インストール用のソフトウェアHOMEBREW
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#qiskit">
-   qiskit
+  <a class="reference internal nav-link" href="#python3">
+   python3
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#d-wave">
-   D-Wave
+  <a class="reference internal nav-link" href="#git">
+   Git
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   仮想環境
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notebook">
+   notebook
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vs-codepython">
+   VS codeのpython設定
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-book">
+   Jupyter Book
   </a>
  </li>
 </ul>
@@ -369,29 +414,72 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="python">
-<h1>python計算用ライブラリ<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="tensor-flow">
-<h2>tensor flow<a class="headerlink" href="#tensor-flow" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="qiskit">
-<h2>qiskit<a class="headerlink" href="#qiskit" title="Permalink to this headline">¶</a></h2>
-<p>qiskitのインストール<br />
-pip3 install qiskit<br />
-pip3 install qiskit[visualization]<br />
-pip install ‘qiskit[visualization]’ # zshの場合</p>
+<h1>python開発環境<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="homebrew">
+<h2>インストール用のソフトウェアHOMEBREW<a class="headerlink" href="#homebrew" title="Permalink to this headline">¶</a></h2>
+<p>HOME BREWのインストール
+/bin/bash -c “$(curl -fsSL <a class="reference external" href="https://raw.githubusercontent.com/Homebrew/install/master/install.sh">https://raw.githubusercontent.com/Homebrew/install/master/install.sh</a>)”</p>
 <p>バージョン確認<br />
-qiskit.<strong>qiskit_version</strong></p>
-<p>qiskit notebookのインストール<br />
-pip3 install –user git+https://github.com/qiskit-community/qiskit-textbook.git#subdirectory=qiskit-textbook-src</p>
-<p>描写ツールをmatplotlibに設定する<br />
-settings.conf ファイル(~/.qiskit/)を作成<br />
-circuit_drawer = mpl</p>
-<p>画像タイプをSVGに設定する<br />
-ipython_kernel_config.pyファイル(通常は~/.ipython/profile_default/)を作成<br />
-c.InlineBackend.figure_format = ‘svg’</p>
+brew -v</p>
 </div>
-<div class="section" id="d-wave">
-<h2>D-Wave<a class="headerlink" href="#d-wave" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="python3">
+<h2>python3<a class="headerlink" href="#python3" title="Permalink to this headline">¶</a></h2>
+<p>pythonのバージョン指定してインストール<br />
+brew install python&#64;3.9</p>
+<p>python3インストール場所確認<br />
+which python3</p>
+<p>python3バージョンの確認<br />
+python3 –version</p>
+<p>pip（pythonライブラリインストール用のライブラリ）のアップグレード<br />
+python3 -m pip install –upgrade pip</p>
+</div>
+<div class="section" id="git">
+<h2>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h2>
+<p>Gitのインストール<br />
+brew install git</p>
+<p>Gitのインストール場所確認<br />
+which git</p>
+<p>Gitのバージョン確認<br />
+git –version</p>
+<p>Gitの設定<br />
+git config –global <a class="reference external" href="http://user.name">user.name</a> “xxx”<br />
+git config –global user.email <a class="reference external" href="mailto:xxx&#37;&#52;&#48;xxx&#46;xxx">xxx<span>&#64;</span>xxx<span>&#46;</span>xxx</a></p>
+<p>Gitの設定確認<br />
+git config –list</p>
+</div>
+<div class="section" id="id1">
+<h2>仮想環境<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>venvで仮想環境を作成する<br />
+python3.10 -m venv .**** (例：.venv)</p>
+</div>
+<div class="section" id="notebook">
+<h2>notebook<a class="headerlink" href="#notebook" title="Permalink to this headline">¶</a></h2>
+<p>notebookのインストール<br />
+python3 -m pip install jupyter</p>
+</div>
+<div class="section" id="vs-codepython">
+<h2>VS codeのpython設定<a class="headerlink" href="#vs-codepython" title="Permalink to this headline">¶</a></h2>
+<p>VS codeのインストール<br />
+解凍しアプリケーションフォルダに移動</p>
+<p>pythonのextensionをインストール
+Extensions &gt;  Python</p>
+<p>python3の場所を設定する<br />
+setting &gt; command palette &gt; python select interpreter &gt;</p>
+<p>VS codeの設定確認<br />
+VS code &gt; terminal &gt; which python<br />
+VS code &gt; terminal &gt; python –version</p>
+<p>VS codeのエディタ設定<br />
+setting &gt; command palette &gt; python linting enabled<br />
+setting &gt; command palette &gt; python linting flake8</p>
+<p>VS code で git clone<br />
+setting &gt; command palette &gt; git clone</p>
+</div>
+<div class="section" id="jupyter-book">
+<h2>Jupyter Book<a class="headerlink" href="#jupyter-book" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter Bookのインストール<br />
+pip3 install -U jupyter-book</p>
+<p>Jupyter Bookの更新パッケージ<br />
+pip3 install ghp-import</p>
 </div>
 </div>
 
@@ -424,13 +512,13 @@ c.InlineBackend.figure_format = ‘svg’</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">python開発環境</p>
+            <p class="prev-next-title">環境設定</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="env3.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">hands on</p>
+        <p class="prev-next-title">python計算用ライブラリ</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

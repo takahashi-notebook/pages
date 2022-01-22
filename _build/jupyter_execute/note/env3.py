@@ -1,36 +1,33 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # hands on
+# # python計算用ライブラリ
 # 
-# ## 仮想環境
-# venvで仮想環境を作成する  
-# python3.10 -m venv .**** (例：.venv)  
+# ## tensor flow
+# 
+# ## qiskit  
+# qiskitのインストール  
+# pip3 install qiskit  
+# pip3 install qiskit[visualization]  
+# pip install 'qiskit[visualization]' # zshの場合  
+# 
+# バージョン確認  
+# qiskit.__qiskit_version__  
+# 
+# qiskit notebookのインストール  
+# pip3 install --user git+https://github.com/qiskit-community/qiskit-textbook.git#subdirectory=qiskit-textbook-src  
+# 
+# 描写ツールをmatplotlibに設定する  
+# settings.conf ファイル(~/.qiskit/)を作成  
+# circuit_drawer = mpl  
 #   
-# 仮想環境を反映する  
-# source .venv/bin/activate  
-#   
-# 仮想環境から出る  
-# deactivate  
-#     
-# ライブラリの出力  
-# pip3 freeze > requirements.txt  
-#   
-# ライブラリ出力リストをインストール  
-# pip3 install -r requirements.txt  
-#   
-# ## notebook  
-# notebookの実行  
-# python3 -m notebook  
-#   
-# ## Jupyter Book
-# Jupyter Book インストールの作成  
-# jb create xxx  
-#   
-# Jupyter Bookの更新  
-# jb build --all .  
-#   
-# GitHub Pagesを更新する  
-# ghp-import -n -p -f _build/html  
+# 画像タイプをSVGに設定する  
+# ipython_kernel_config.pyファイル(通常は~/.ipython/profile_default/)を作成  
+# c.InlineBackend.figure_format = 'svg'  
+# 
+# ## D-Wave
+# 
+# 
+# 
 
 # 
