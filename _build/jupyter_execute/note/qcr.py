@@ -15,13 +15,11 @@
 # algorithm zoo  
 # https://quantumalgorithmzoo.org
 # 
-# D-Wave Japan
+# D-Wave Japan  
 # https://dwavejapan.com/system/
 # 
-# Amplify
+# Amplify  
 # https://amplify.fixstars.com/ja/techresources/about-quantum-computer/
-# 
-# # Quantum Computing
 # 
 # IBM Quantum  
 # https://quantum-computing.ibm.com/login

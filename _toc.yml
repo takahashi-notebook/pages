@@ -25,3 +25,10 @@ chapters:
   - file: note/qc1
   - file: note/qc2
   - file: note/qcr
+- file: note/br0
+  sections:
+  - file: note/br1
+  - file: note/brr
+- file: note/vo0
+  sections:
+  - file: note/vo1
